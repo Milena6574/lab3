@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Байбурина, Задание 1</title> 
+	<script type="text/javascript" src="jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+<h3>«Частные инвесторы становятся движущей силой»</h3>
+<p>Замглавы «БКС Мир инвестиций» о смене стратегий на фондовом рынке </p>
+<img src="https://icdn.lenta.ru/images/2021/05/25/16/20210525160712696/top7_a8fe0fd6e0c039328bb213b9338c376b.jpg" width="300px" alt=""><br>
+<br>
+<h3>Давай на спор</h3>
+<p>Банки обещают россиянам легкие деньги. Почему доверчивые клиенты редко остаются в выигрыше?</p>
+<img src="https://icdn.lenta.ru/images/2021/05/14/20/20210514205457156/top7_237d5fb8cea6db54ecfc2e47339ad1fd.jpg" width="300px" alt=""><br>
+<br>
+<h3>За что судят мэра Томска?</h3>
+<p>Томичи не верят в виновность Ивана Кляйна</p>
+<img src="https://icdn.lenta.ru/images/2021/05/20/18/20210520184344387/top7_7055769a1267c10722b86984971c89ea.jpg" width="300px" alt=""><br>
+<br>
+<h3>Экспорт лома черных металлов попал под угрозу</h3>
+<p>Специалисты ожидают крах отрасли из-за пошлин в 90 евро</p>
+<img src="https://icdn.lenta.ru/images/2021/05/25/12/20210525124704451/top7_b221565e8e8d2018bb6c35e0ab199500.jpg" width="300px" alt=""><br>
+<br> 
+<h3>Секретный революционер</h3>
+<p>В России вышел фильм о Павле Дурове. Что нового мы узнали о создателе «ВКонтакте» и Telegram?</p>
+<img src="https://icdn.lenta.ru/images/2021/04/23/20/20210423201446851/top7_212a1938257b3722f82ba2d3cac0586c.jpg" width="300px" alt=""><br>
+<br> 
+</div>
+<script type="text/javascript">
+	let tek = 5;
+			function lab(str) {
+				if (str.length==0) {
+    document.getElementById("mil").innerHTML="";
+    return;}
+  if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();} else { 
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("mil").innerHTML=this.responseText;
+    }}
+		xmlhttp.open("GET","1.php?tek="+tek,true);
+		xmlhttp.send();
+		tek+=5;}
+		 </script>
+	<span id = "mil"></span>
+	<form>
+		<input onclick = "lab(this.value)" type="button" value="Отобразить еще">
+	</form>
+</body>
+</html>
